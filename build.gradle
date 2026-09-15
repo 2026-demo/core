@@ -4,7 +4,6 @@ plugins {
 }
 
 group = 'lumen'
-
 version = '0.0.1-SNAPSHOT'
 
 java {
@@ -19,4 +18,12 @@ repositories {
 
 dependencies {
     implementation 'org.springframework:spring-context:6.2.10'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
 }
